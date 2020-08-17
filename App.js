@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { AppLoading } from "expo";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { useFonts } from "expo-font";
 
 import Header from "./components/Header";
@@ -11,11 +12,11 @@ export default function App() {
     });
 
     if (!loaded) {
-        return null;
+        return <AppLoading></AppLoading>;
     }
 
     return (
-        // TODO: 1. navigator 만들고, 2. 아래 View component 그대로 mainScreen에 옮기기
+        // TODO 1. navigator 만들고, 2. 아래 View component 그대로 mainScreen에 옮기기
         <View style={styles.container}>
             <View style={styles.comp}>
                 <Text style={styles.headerTxt}>방버미</Text>
@@ -23,7 +24,14 @@ export default function App() {
             <View style={styles.contents}>
                 <Text style={styles.h3}>최근 방범 알림</Text>
                 <View style={styles.board}>
-                    <Text style={styles.context}>미등록 개체가 2번 카메라에 감지되었습니다. </Text>
+                    <TouchableOpacity style={styles.listitem}>
+                        <Text style={{ ...styles.context, fontSize: 12 }}>08.05 17:10:32</Text>
+                        <Text style={styles.context}>미등록 개체가 2번 카메라에 감지되었습니다. </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text style={{ ...styles.context, fontSize: 12 }}>08.07 20:09:23</Text>
+                        <Text style={styles.context}>미등록 개체가 2번 카메라에 감지되었습니다. </Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
@@ -61,6 +69,9 @@ const styles = StyleSheet.create({
         margin: 5,
         padding: 5,
         elevation: 1,
+    },
+    listitem: {
+        marginVertical: 3,
     },
     context: {
         fontFamily: "hannaLight",

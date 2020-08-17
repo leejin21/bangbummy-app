@@ -6,9 +6,9 @@
 
 versions는 다음과 같다.
 
-|  expo   | expo-font | expo-status-bar |  react   | react-dom | react-native | react-native-web |
-| :-----: | :-------: | :-------------: | :------: | :-------: | :----------: | :--------------: |
-| ~38.0.8 |  ~8.2.2   |     ~1.0.2      | ~16.11.0 | ~16.11.0  |  sdk-38.0.2  |     ~0.11.7      |
+|  expo   | expo-cli | expo-font | expo-status-bar |  react   | react-dom | react-native | react-native-web |
+| :-----: | :------: | :-------: | :-------------: | :------: | :-------: | :----------: | :--------------: |
+| ~38.0.8 | 3.21.12  |  ~8.2.2   |     ~1.0.2      | ~16.11.0 | ~16.11.0  |  sdk-38.0.2  |     ~0.11.7      |
 
 이때 "react-native" 관련해서는 여기 참고하기 => "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz"
 
