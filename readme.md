@@ -14,6 +14,5 @@ versions는 다음과 같다.
 
 ## 요구사항
 
-1. navigator에서 font 만지면서 다른 데로 적용 가능하게 하기
-2. App.js에서 MainScreen.js, Header.js로 옮기기
-3. api 받을 준비하기
+1. api 받을 준비하기
+2.
