@@ -16,11 +16,7 @@ export default function App() {
         return <AppLoading></AppLoading>;
     }
 
-    return (
-        // TODO 1. navigator 만들고, 2. 아래 View component 그대로 mainScreen에 옮기기
-        <CrimePrevNavigator></CrimePrevNavigator>
-        // <RecentEventScreen></RecentEventScreen>
-    );
+    return <CrimePrevNavigator></CrimePrevNavigator>;
 }
 
 const styles = StyleSheet.create({

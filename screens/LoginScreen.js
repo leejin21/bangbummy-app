@@ -1,12 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Button } from "react-native";
 
-const RecentEventScreen = (props) => {
+const LoginScreen = (props) => {
     return (
         <View style={styles.container}>
-            <Text style={styles.h3}>Register, Login Screen</Text>
-            <Text style={styles.h3}>Hellooo</Text>
-            <Button title="Done register, go to main" onPress={() => props.navigation.navigate({ routeName: "Main" })}></Button>
+            <Text style={styles.h3}>Login Screen</Text>
+            <Button title="Register Screen" onPress={() => props.navigation.navigate({ routeName: "Registeration" })}></Button>
+            <Button title="Main Screen" onPress={() => props.navigation.navigate({ routeName: "Main" })}></Button>
         </View>
     );
 };
@@ -23,4 +23,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default RecentEventScreen;
+export default LoginScreen;

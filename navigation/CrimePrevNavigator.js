@@ -1,7 +1,7 @@
 import { Platform } from "react-native";
 import React from "react";
 
-import { createAppContainer } from "react-navigation";
+import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import { Entypo, MaterialIcons } from "@expo/vector-icons";
@@ -12,6 +12,8 @@ import LiveVideoScreen from "../screens/LiveVideoScreen";
 import RecentEventScreen from "../screens/RecentEventScreen";
 import RecordVideoScreen from "../screens/RecordVideoScreen";
 import RegisterScreen from "../screens/RegisterScreen";
+import LoginScreen from "../screens/LoginScreen";
+import UserInfoScreen from "../screens/UserInfoScreen";
 
 const NewEventNavigator = createStackNavigator(
     {
@@ -20,6 +22,10 @@ const NewEventNavigator = createStackNavigator(
         // 아래 코드가 longer version
         RecordVideo: {
             screen: RecordVideoScreen,
+        },
+        // TODO 이렇게 겹쳐도 되는 건지?
+        UserInfo: {
+            screen: UserInfoScreen,
         },
     },
     {
@@ -42,7 +48,7 @@ const CctvListNavigator = createStackNavigator(
     }
 );
 
-const CrimePrevNavigator = createBottomTabNavigator({
+const MainNavigator = createBottomTabNavigator({
     NewEvent: {
         screen: NewEventNavigator,
         navigationOptions: {
@@ -67,5 +73,24 @@ const CrimePrevNavigator = createBottomTabNavigator({
     },
 });
 
+const AuthNavigator = createSwitchNavigator({
+    Login: {
+        screen: LoginScreen,
+        navigationOptions: {},
+    },
+    Registeration: {
+        screen: RegisterScreen,
+        navigationOptions: {},
+    },
+    Main: {
+        screen: MainNavigator,
+        // navigationOptions: {},
+    },
+
+    UserInfo: {
+        screen: UserInfoScreen,
+    },
+});
+
 // react navigation은 appContainer을 만들어야함.
-export default createAppContainer(CrimePrevNavigator);
+export default createAppContainer(AuthNavigator);

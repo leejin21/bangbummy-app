@@ -5,7 +5,7 @@ import Header from "../components/Header";
 const RecentEventScreen = (props) => {
     return (
         <View style={styles.container}>
-            <Header></Header>
+            <Header userInfoHandler={props.navigation.navigate}></Header>
             <View style={styles.contents}>
                 <Text style={styles.h3}>최근 방범 알림</Text>
                 <View style={styles.board}>
