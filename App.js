@@ -31,21 +31,4 @@ const styles = StyleSheet.create({
         width: "100%",
         paddingHorizontal: 20,
     },
-    h3: {
-        fontFamily: "hannaLight",
-        fontSize: 20,
-    },
-    board: {
-        margin: 5,
-        padding: 5,
-        elevation: 1,
-    },
-    listitem: {
-        marginVertical: 3,
-    },
-    context: {
-        fontFamily: "hannaLight",
-        fontSize: 15,
-        color: "#5b5b5b",
-    },
 });

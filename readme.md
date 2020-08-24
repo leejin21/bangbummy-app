@@ -21,6 +21,7 @@ versions는 다음과 같다.
 
 -   register&login
 
+    -   로그인화면 먼저
     -   처음 회원가입하면 로그인 스킵: 로그인 화면 생략하고 api 보낼 수 있게 하기
     -   평소 자동 로그인 상태 유지: async-storage 이용
 
