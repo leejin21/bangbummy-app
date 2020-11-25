@@ -5,10 +5,14 @@ import { Ionicons } from "@expo/vector-icons";
 const Header = (props) => {
     return (
         <View style={styles.comp}>
-            <Text style={styles.headerTxt}>방버미</Text>
+            <Text style={styles.headerTxt}>{props.title}</Text>
+            {props.icon? 
             <TouchableOpacity style={styles.icon} onPress={() => props.userInfoHandler({ routeName: "UserInfo" })}>
                 <Ionicons name="md-person" size={24} color="black" />
             </TouchableOpacity>
+            : 
+            <View></View>
+            }
         </View>
     );
 };
