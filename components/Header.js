@@ -7,11 +7,11 @@ const Header = (props) => {
         <View style={styles.comp}>
             <Text style={styles.headerTxt}>{props.title}</Text>
             {props.icon? 
-            <TouchableOpacity style={styles.icon} onPress={() => props.userInfoHandler({ routeName: "UserInfo" })}>
-                <Ionicons name="md-person" size={24} color="black" />
-            </TouchableOpacity>
-            : 
-            <View></View>
+                <TouchableOpacity style={styles.icon} onPress={() => props.userInfoHandler({ routeName: "UserInfo" })}>
+                    <Ionicons name="md-person" size={24} color="black" />
+                </TouchableOpacity>
+                : 
+                <View></View>
             }
         </View>
     );

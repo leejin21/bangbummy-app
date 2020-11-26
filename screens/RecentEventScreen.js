@@ -10,11 +10,11 @@ const RecentEventScreen = (props) => {
                 <Text style={styles.h3}>최근 방범 알림</Text>
                 <View style={styles.board}>
                     <TouchableOpacity style={styles.listitem} onPress={() => props.navigation.navigate({ routeName: "RecordVideo" })}>
-                        <Text style={{ ...styles.context, fontSize: 12 }}>08.05 17:10:32</Text>
+                        <Text style={{ ...styles.context, fontSize: 12 }}>11.26 17:10:32</Text>
                         <Text style={styles.context}>미등록 개체가 2번 카메라에 감지되었습니다. </Text>
                     </TouchableOpacity>
                     <TouchableOpacity>
-                        <Text style={{ ...styles.context, fontSize: 12 }}>08.07 20:09:23</Text>
+                        <Text style={{ ...styles.context, fontSize: 12 }}>11.25 20:09:23</Text>
                         <Text style={styles.context}>미등록 개체가 2번 카메라에 감지되었습니다. </Text>
                     </TouchableOpacity>
                 </View>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     },
     h3: {
         fontFamily: "hanna11",
-        fontSize: 20,
+        fontSize: 25,
     },
     board: {
         margin: 5,
